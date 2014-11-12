@@ -12,3 +12,8 @@ Simply run pypy orderBlock_selectiveModelav.py (orderBlock_selectiveModelav_STRI
 ---------------------------------
 
 I use a Metropolis-Hastings-like algorithm for the edges and Gibbs for the classes and orders. Furthermore, I introduce a periodic re-initialisation to improve results. The current version uses 200 data points, 2000 MCMC moves, 10 ten runs for the selective model averaging.
+
+---------------------------------
+
+Issues:
+I use quite a lot of deepcopies which seem super inefficient.  
