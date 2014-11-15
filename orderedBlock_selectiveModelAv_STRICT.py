@@ -18,8 +18,7 @@ def generateData(dag,n,alpha,arity):
         else:
             pc = getParentConfig([allRanges[index] for index in parents])
             for item in pc:
-                for k in range(len(item)):
-                    myDict[item]=sampleDirichlet(alpha,arity)
+            	myDict[item]=sampleDirichlet(alpha,arity)
             for j in range(n):
                 data[j][i]=sampleDiscrete(myDict[matchConfig(data[j], parents)])
     return data
