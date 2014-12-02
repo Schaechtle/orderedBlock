@@ -1,7 +1,7 @@
 orderedBlock
 ============
 
-Re-impmlementation of "Structured Priors for Structure Learning". Now the code is restructured to use a compositional language for transition operators, in the style of BLAISE [Bonawitz, 2008] using generic Kernel, State and Density classes.
+Re-impmlementation of "Structured Priors for Structure Learning". Now the code is restructured to use a compositional language for transition operators, in the style of BLAISE [Bonawitz, 2008] using generic Kernel,State and Density classes.
 ---------------------------------
 
 I use a Gibbs sampling throughout. Furthermore, I introduce a periodic re-initialisation to improve results. The current version uses 200 data points, 2000 MCMC moves, 10 ten runs for the selective model averaging. 

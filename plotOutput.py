@@ -1,22 +1,13 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from orderedBlock import importMyData
+from util import importMyData
 import copy
 
 
 
 def plotDAGprobs(name):
     dataRaw = importMyData(name)
-    for line in dataRaw:
-        print line
-    printdag = [[int(round(float(dataRaw[i][j])/10)) for j in range(len(dataRaw[0]))] for i in range(len(dataRaw[0]))]
-    for line in printdag:
-        print line
-    print "######################"
     dataList = [[float(dataRaw[i][j])/10 for j in range(len(dataRaw[0]))] for i in range(len(dataRaw[0]))]
-    for line in dataList:
-        print line
-    print "######################"
     data=np.array(dataList) 
     fig, ax = plt.subplots()
     heatmap = ax.pcolor(data, cmap=plt.cm.Blues)
@@ -42,5 +33,6 @@ def importMyData(name):
         arr=[]
     return matrix
 plotDAGprobs("selectiveBest.csv")
-plotDAGprobs("BOT.csv")
+print("Printed to selectiveBest.png")
+#plotDAGprobs("BOT.csv")
 
